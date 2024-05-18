@@ -19,4 +19,13 @@ Welcome to the Travel Management System repository. This project is designed to 
 
 ## Schema 
 
-1. **CustomerDestails:** `CustomerID` `FullName` `Email` `Phone` `Identity_proof`  
+1. **CustomerDestails:** `CustomerID` `FullName` `Email` `Phone` `Identity_proof`
+2. **Employee:** `EmployeeID` `Emp_name` `Department` `Emp_salary` `Emp_Position`
+3. **Destination:** `DestinationID` `DestinationName` `Distance` `Country`
+4. **Trains:** `TrainID` `TrainName` `T_DepartureTime` `T_ArrivalTime` `T_Origin` `T_Destination` `DestinationID`
+5. **Flights:** `FlightID` `FlightNumber` `Airline` `FL_DepartureTime` `FL_ArrivalTime` `FL_Origin` `FL_Destination` `DestinationID`
+6. **Buses:** `BusID` `BusNumber` `Operator` `B_DepartureTime` `B_ArrivalTime` `B_Origin` `B_Destination` `DestinationID`
+7. **Cruise:** `CruiseID` `CruiseName` `CR_DepartureTime` `CR_ArrivalTime` `CR_Origin` `CR_Destination` `DestinationID`
+8. **Car:** `CarID` `CarModel` `PlateNumber` `Capacity` `C_Origin` `C_Destination` `DestinationID`
+9. **Payment:** `PaymentID` `PaymentMethod` `PaymentAmount` `PaymentDate` `CustomerID`
+10. **Booking:** `BookingID` `CustomerID` `Booking_status` `PaymentID` `Booking_time` `Transport` `Origin` `Destination`
