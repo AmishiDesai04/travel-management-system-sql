@@ -1,6 +1,6 @@
 use grp3_DBMSProject;
 
-CREATE TABLE IF NOT EXISTS CustomerDetails_reneeka (
+CREATE TABLE IF NOT EXISTS CustomerDetails (
     CustomerID INT PRIMARY KEY,
     FullName VARCHAR(50),
     Email VARCHAR(50),
@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS CustomerDetails_reneeka (
     Identity_proof VARCHAR(100)
 );
 
-INSERT INTO CustomerDetails_reneeka (CustomerID, FullName, Email, Phone, Identity_proof)
+INSERT INTO CustomerDetails (CustomerID, FullName, Email, Phone, Identity_proof)
 VALUES
     (1, 'Amishi Desai', 'desai014@gmail.com', '9345698768', 'Aadhar'),
     (2, 'Chahel Gupta', 'chx2904@gmail.com', '9876543210', 'Passport'),
@@ -21,7 +21,7 @@ VALUES
     (9, 'Aryan Shah', 'arshah56@gmail.com', '0123456789', 'Driver License'),
     (10, 'Veer Patil', 'vp3til@gmail.com', '9398631146', 'Aadhar');
 
-CREATE TABLE IF NOT EXISTS Employee_reneeka (
+CREATE TABLE IF NOT EXISTS Employee (
     EmployeeID INT PRIMARY KEY,
     Emp_name VARCHAR(50),
     Department VARCHAR(50),
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS Employee_reneeka (
     Emp_Position VARCHAR(50)
 );
 
-INSERT INTO Employee_reneeka (EmployeeID, Emp_name, Department, Emp_salary, Emp_Position)
+INSERT INTO Employee (EmployeeID, Emp_name, Department, Emp_salary, Emp_Position)
 VALUES
     (1, 'Vivean Arya', 'Bus', 54000, 'Driver'),
     (2, 'Sonia Mascerehnas', 'Car', 55000, 'Guide'),
@@ -68,7 +68,7 @@ VALUES
     (103, 'Indore', 595, 'India'),
     (104, 'Lucknow',895,'India');
 
-CREATE TABLE IF NOT EXISTS Trains_reneeka (
+CREATE TABLE IF NOT EXISTS Trains (
     TrainID INT PRIMARY KEY,
     TrainName VARCHAR(50),
     T_DepartureTime TIME,
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS Trains_reneeka (
     FOREIGN KEY (DestinationID) REFERENCES Destination(DestinationID)
 );
 
-INSERT INTO Trains_reneeka (TrainID, TrainName, T_DepartureTime, T_ArrivalTime, T_Origin, T_Destination, DestinationID)
+INSERT INTO Trains (TrainID, TrainName, T_DepartureTime, T_ArrivalTime, T_Origin, T_Destination, DestinationID)
 VALUES
     (1, 'Rajdhani Express', '08:00:00', '15:00:00', 'Delhi', 'Mumbai', 201), 
     (2, 'Shatabdi Express', '09:00:00', '14:00:00', 'Mumbai', 'Pune', 202), 
@@ -92,7 +92,7 @@ VALUES
     (9, 'Shatabdi Express', '16:00:00', '23:00:00', 'Delhi', 'Hyderabad', 205), 
     (10, 'Rajdhani Express', '17:00:00', '00:00:00', 'Kolkata', 'Mumbai', 201); 
 
-CREATE TABLE IF NOT EXISTS Flights_amishi (
+CREATE TABLE IF NOT EXISTS Flights (
     FlightID INT PRIMARY KEY,
     FlightNumber VARCHAR(10),
     Airline VARCHAR(50),
@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS Flights_amishi (
     FOREIGN KEY (DestinationID) REFERENCES Destination(DestinationID)
 );
 
-INSERT INTO Flights_amishi (FlightID, FlightNumber, Airline, FL_DepartureTime, FL_ArrivalTime, FL_Origin, FL_Destination, DestinationID)
+INSERT INTO Flights (FlightID, FlightNumber, Airline, FL_DepartureTime, FL_ArrivalTime, FL_Origin, FL_Destination, DestinationID)
 VALUES
     (1, 'AI101', 'Air India', '2024-03-18 08:00:00', '2024-03-18 10:00:00', 'Delhi', 'Mumbai', 201), 
     (2, 'AI102', 'Air India', '2024-03-18 10:00:00', '2024-03-18 12:00:00', 'Mumbai', 'Pune', 202),
@@ -117,7 +117,7 @@ VALUES
     (9, 'QF101', 'Qantas', '2024-03-19 01:00:00', '2024-03-19 06:00:00', 'Delhi', 'Sydney', 305), 
     (10, 'SQ104', 'Singapore Airlines', '2024-03-19 03:00:00', '2024-03-19 05:00:00', 'Mumbai', 'Singapore', 302); 
 
-CREATE TABLE IF NOT EXISTS Buses_amishi (
+CREATE TABLE IF NOT EXISTS Buses (
     BusID INT PRIMARY KEY,
     BusNumber VARCHAR(10),
     Operator VARCHAR(50),
@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS Buses_amishi (
     FOREIGN KEY (DestinationID) REFERENCES Destination(DestinationID)
 );
 
-INSERT INTO Buses_amishi (BusID, BusNumber, Operator, B_DepartureTime, B_ArrivalTime, B_Origin, B_Destination, DestinationID)
+INSERT INTO Buses (BusID, BusNumber, Operator, B_DepartureTime, B_ArrivalTime, B_Origin, B_Destination, DestinationID)
 VALUES
     (1, 'B001', 'ABC Bus Services', '2024-03-18 08:00:00', '2024-03-18 10:00:00', 'Delhi', 'Mumbai', 201), 
     (2, 'B002', 'XYZ Travels', '2024-03-18 10:00:00', '2024-03-18 12:00:00', 'Mumbai', 'Pune', 202), 
@@ -142,7 +142,7 @@ VALUES
     (9, 'B009', 'MNO Roadways', '2024-03-19 01:00:00', '2024-03-19 06:00:00', 'Delhi', 'Jaipur', 102), 
     (10, 'B010', 'PQR Travels', '2024-03-19 03:00:00', '2024-03-19 05:00:00', 'Mumbai', 'Indore', 103); 
 
-CREATE TABLE IF NOT EXISTS Cruise_amishi (
+CREATE TABLE IF NOT EXISTS Cruise (
     CruiseID INT PRIMARY KEY,
     CruiseName VARCHAR(50),
     CR_DepartureTime DATETIME,
@@ -153,7 +153,7 @@ CREATE TABLE IF NOT EXISTS Cruise_amishi (
     FOREIGN KEY (DestinationID) REFERENCES Destination(DestinationID)
 );
 
-INSERT INTO Cruise_amishi (CruiseID, CruiseName, CR_DepartureTime, CR_ArrivalTime, CR_Origin, CR_Destination, DestinationID)
+INSERT INTO Cruise (CruiseID, CruiseName, CR_DepartureTime, CR_ArrivalTime, CR_Origin, CR_Destination, DestinationID)
 VALUES
     (1, 'London to Sydney Cruise', '2024-03-18 08:00:00', '2024-03-18 20:00:00', 'London', 'Sydney', 305), 
     (2, 'Singapore to Dubai Cruise', '2024-03-18 10:00:00', '2024-03-18 22:00:00', 'Singapore', 'Dubai', 303), 
@@ -166,7 +166,7 @@ VALUES
     (9, 'Dubai to Singapore Cruise', '2024-03-19 01:00:00', '2024-03-19 10:00:00', 'Dubai', 'Singapore', 302), 
     (10, 'Sydney to London Cruise', '2024-03-19 03:00:00', '2024-03-19 16:00:00', 'Sydney', 'London', 301); 
 
-CREATE TABLE IF NOT EXISTS Car_chahel (
+CREATE TABLE IF NOT EXISTS Car (
     CarID INT PRIMARY KEY,
     CarModel VARCHAR(50),
     PlateNumber VARCHAR(20),
@@ -177,7 +177,7 @@ CREATE TABLE IF NOT EXISTS Car_chahel (
     FOREIGN KEY (DestinationID) REFERENCES Destination(DestinationID)
 );
 
-INSERT INTO Car_chahel (CarID, CarModel, PlateNumber, Capacity, C_Origin, C_Destination, DestinationID)
+INSERT INTO Car (CarID, CarModel, PlateNumber, Capacity, C_Origin, C_Destination, DestinationID)
 VALUES
     (101, 'Toyota Innova', 'MH01AB1234', 7, 'Mumbai', 'Pune', 202),
     (102, 'Maruti Swift', 'MH02CD5678', 5, 'Pune', 'Mumbai', 201),
@@ -191,7 +191,7 @@ VALUES
     (110, 'Mahindra Scorpio', 'MH10ST3456', 7, 'Indore', 'Ahmedabad', 101);
 
 
-CREATE TABLE IF NOT EXISTS Payment_chahel (
+CREATE TABLE IF NOT EXISTS Payment (
     PaymentID INT PRIMARY KEY,
     PaymentMethod VARCHAR(50),
     PaymentAmount DECIMAL(10, 2),
@@ -200,7 +200,7 @@ CREATE TABLE IF NOT EXISTS Payment_chahel (
     FOREIGN KEY (CustomerID) REFERENCES CustomerDetails_reneeka(CustomerID)
 );
 
-INSERT INTO Payment_chahel (PaymentID, PaymentMethod, PaymentAmount, PaymentDate, CustomerID)
+INSERT INTO Payment (PaymentID, PaymentMethod, PaymentAmount, PaymentDate, CustomerID)
 VALUES
     (101, 'Credit Card', 5000.00, '2023-01-15', 1),
     (102, 'Debit Card', 3000.00, '2023-02-20', 2),
@@ -214,7 +214,7 @@ VALUES
     (110, 'Cash', 2300.00, '2023-10-30', 10);
 
 
-CREATE TABLE IF NOT EXISTS Booking_chahel (
+CREATE TABLE IF NOT EXISTS Booking (
     BookingID INT PRIMARY KEY,
     CustomerID INT,
     Booking_status VARCHAR(20),
@@ -227,7 +227,7 @@ CREATE TABLE IF NOT EXISTS Booking_chahel (
     FOREIGN KEY (PaymentID) REFERENCES Payment_chahel(PaymentID)
 );
 
-INSERT INTO Booking_chahel (BookingID, CustomerID, Booking_status, PaymentID, Booking_time, Transport, Origin, Destination)
+INSERT INTO Booking (BookingID, CustomerID, Booking_status, PaymentID, Booking_time, Transport, Origin, Destination)
 VALUES
     (1, 1, 'Confirmed', 101, '2024-03-10 08:00:00', (SELECT Operator FROM Buses_amishi WHERE DestinationID = 201), 'Delhi','Mumbai'),
     (2, 2, 'Confirmed', 102, '2024-03-10 10:00:00', (SELECT PlateNumber FROM Car_chahel WHERE DestinationID = 202), 'Mumbai', 'Pune'),
