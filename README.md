@@ -36,37 +36,37 @@ Welcome to the Travel Management System repository. This project is designed to 
 
 * **Customer Management**
 
-- Add new customers
-- Update customer information
-- Delete customer records
-- Retrieve customer details
+   - Add new customers
+   - Update customer information
+   - Delete customer records
+   - Retrieve customer details
 
 * **Employee Management**
 
-- Add new employees
-- Update employee information
-- Delete employee records
-- Retrieve employee details
+   - Add new employees
+   - Update employee information
+   - Delete employee records
+   - Retrieve employee details
 
 * **Manage Destinations**
 
-- Add new travel destinations
-- Update destination details
-- Delete destination records
-- Retrieve destination information
+   - Add new travel destinations
+   - Update destination details
+   - Delete destination records
+   - Retrieve destination information
 
 * **Transportation Options**
 
-- Manage trains, buses, flights, cruises, and car rental details
+   - Manage trains, buses, flights, cruises, and car rental details
 
 * **Booking and Payment Management**
 
-- Handle booking and reservation details
-- Process and manage payments
+   - Handle booking and reservation details
+   - Process and manage payments
   
 * **Advanced SQL Queries**
 
-- Use provided SQL scripts to execute complex queries involving subqueries and joins
+   - Use provided SQL scripts to execute complex queries involving subqueries and joins
 
 ## Authors 
 
